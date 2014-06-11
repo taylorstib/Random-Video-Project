@@ -16,6 +16,7 @@ get '/' do
 	erb :home	
 end
 
+
 get '/frylaurie' do 
 	if session[:videos] == nil
 		session[:videos] = ['J691coIfFvs', 'gv2B7444Bsk', 'U8ko2nCk_hE', 'e9YcWLqjb9k', 'rLo7Ao54TJA']
@@ -35,7 +36,6 @@ post '/' do
 	vidURL = params['vidURL']
 	vidURL = vidURL.split('?v=')
 	vidURL = vidURL[1]
-
 
 	session[:videos].push(vidURL)
 	result = randvid(session[:videos])

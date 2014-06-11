@@ -43,6 +43,32 @@ h2 {
 	padding: 20px;
 }
 
+.welcome{
+	display:inline-block;
+	text-align: center;
+	font-size: 40px;
+	width: 400px;
+	margin: 0 auto;
+	font-family: 'Raleway', sans-serif;
+}
+
+#description{
+	display: block;
+	text-align: center;
+	font-size: 30px;
+}
+
+.links{
+	display:inline-block;
+	text-align: center;
+	font-size: 40px;
+	width: 400px;
+	margin: 0 auto;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+
 /*.queue{
 	float: left;
 	text-align: center;
