@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/reloader'
 require 'pry'
 
 configure do
@@ -6,40 +7,16 @@ configure do
 end
 
 
-# session["videos"] = ['J691coIfFvs', 'gv2B7444Bsk', 'U8ko2nCk_hE', 'e9YcWLqjb9k', 'rLo7Ao54TJA']
-
-# def randvid
-# 	vid = rand(session["videos"].length)
-# 	"http://www.youtube.com/embed/" + session["videos"][vid] + "?autoplay=1"
-# end
-
-# get '/' do 
-
-# 	result = randvid
-
-# 	# # pass the results back to index.erb
-
-# 	erb :random, :locals => {:result => result}
-
-# end
-
-# post '/' do
-# 	vidURL = params['vidURL']
-# 	session["videos"].push(vidURL)
-# 	result = randvid
-# 	erb :random, :locals => {:result => result}
-
-# end
-
-
-#videos = ['J691coIfFvs', 'gv2B7444Bsk', 'U8ko2nCk_hE', 'e9YcWLqjb9k', 'rLo7Ao54TJA']
-
 def randvid(videos)
 	vid = rand(videos.length)
 	"http://www.youtube.com/embed/" + videos[vid] + "?autoplay=1"
 end
 
-get '/' do 
+get '/' do
+	erb :home	
+end
+
+get '/frylaurie' do 
 	if session[:videos] == nil
 		session[:videos] = ['J691coIfFvs', 'gv2B7444Bsk', 'U8ko2nCk_hE', 'e9YcWLqjb9k', 'rLo7Ao54TJA']
 	end
@@ -68,10 +45,6 @@ binding.pry
 
 end
 
-get '/sets' do
-	erb :sets
-	
-end
 
 binding.pry
 
