@@ -29,8 +29,11 @@ get '/frylaurie' do
 	erb :random, :locals => {:result => result}
 
 end
+get '/sets' do
+	erb :sets, locals => {:sets => sets}
 
-binding.pry 
+end
+# binding.pry 
 
 post '/' do
 	vidURL = params['vidURL']
@@ -41,12 +44,15 @@ post '/' do
 	result = randvid(session[:videos])
 
 	erb :random, :locals => {:result => result}
-binding.pry
+# binding.pry
+end
 
+post '/sets' do
+	
 end
 
 
-binding.pry
+# binding.pry
 
 
 
