@@ -9,17 +9,28 @@
 
     <h1>Playlist Sets Available</h1>
 
-<!-- session[:sets].each do |set| -->
+    session[:sets].each do |set|
     <div id= 'setlist'>
-<!--     <i><%= set %></i> -->
-    <i>A Bit of Fry and Laurie</i>
-    <br>
-    <% session[:videos].each do |video| %>
-    www.youtube.com/watch?v=<%= video %><br>
-    <% end %>
-    <br>
+        <i><%= set %></i>
+        <i>A Bit of Fry and Laurie</i>
+        <br>
+        <% session[:videos].each do |video| %>
+        www.youtube.com/watch?v=<%= video %><br>
+        <% end %>
+        <br>
     </div>
-
+    <div class='input'>
+      <form name="input" action = "#" method="post">
+        <label>
+         Add to the Fry & Laurie playlist!<br>
+         Submit the link to your favorite video— from YouTube only, please!
+         <br>
+         <br>
+        <input type="text" name="vidURL"><br>
+        </label>
+        <input type="submit" value="Submit!">
+      </form>
+    </div>
     <br>
 </body>
 
