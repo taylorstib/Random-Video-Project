@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
+    <title>Random Fry and Laurie</title>
+  </head>
+
+  <body>
+
+    <h1>Playlist Sets Available</h1>
+
+<!-- session[:sets].each do |set| -->
+    <div id= 'setlist'>
+<!--     <i><%= set %></i> -->
+    <i>A Bit of Fry and Laurie</i>
+    <br>
+    <% session[:videos].each do |video| %>
+    www.youtube.com/watch?v=<%= video %><br>
+    <% end %>
+    <br>
+    </div>
+
+    <br>
+</body>
+
+</html>
